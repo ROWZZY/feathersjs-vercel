@@ -3,7 +3,7 @@
   "builds": [
     {
       "src": "app/index.js",
-      "use": "@now/node-server"
+      "use": "@vercel/node"
     }
   ],
   "routes": [{
@@ -12,7 +12,7 @@
           "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
           "Access-Control-Allow-Headers": "X-Requested-With, Content-Type, Accept"
       },
-      "src": "/(.*)",
+      "src": "/.*",
       "dest": "app/index.js"
   }]
 }

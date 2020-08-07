@@ -28,7 +28,6 @@
     "lint": "eslint app/. test/. --config .eslintrc.json --fix",
     "dev": "nodemon app/",
     "start": "node app/",
-    "build": "node app/",
     "jest": "jest  --forceExit"
   },
   "standard": {

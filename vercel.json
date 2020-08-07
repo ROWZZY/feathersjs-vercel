@@ -1,3 +1,6 @@
 {
-  "version": 2
+  "version": 2,
+  "routes": [
+    { "src": "/orders", "methods": ["POST"], "dest": "/index.js" }
+  ]
 }

@@ -1,7 +1,18 @@
 {
   "version": 2,
-  "routes": [
-    { "src": "/hello", "methods": ["GET"], "dest": "./app/serverlessTest.js" },
-    { "src": "/orders", "methods": ["GET", "POST"], "dest": "/app/index.js" }
-  ]
+  "builds": [
+    {
+      "src": "app/index.js",
+      "use": "@now/node-server"
+    }
+  ],
+  "routes": [{
+      "headers": {
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+          "Access-Control-Allow-Headers": "X-Requested-With, Content-Type, Accept"
+      },
+      "src": "/(.*)",
+      "dest": "app/index.js"
+  }]
 }
